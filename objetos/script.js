@@ -81,3 +81,11 @@ var cachorro = {
             return ' '
     }
 }
+
+//Tudo é objeto
+
+var nome = 'Gabriel' //nome virá um objeto de classe String que tem métodos padrões.
+
+var altura = 1.8
+
+altura.toString()//Tranforma 1.8 em "1.8"
