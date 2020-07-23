@@ -1,8 +1,8 @@
 //Selecionando elementos por ID
 
-const animais = document.getElementById('animais')
+//const animais = document.getElementById('animais')
 
-console.log(animais)
+//console.log(animais)
 
 //Selecionando por Classe e Tag
 
@@ -82,3 +82,33 @@ const allP = document.querySelectorAll('p')
 const ultimoP = allP[allP.length - 1]
 
 console.log(ultimoP)
+
+//classes e atributos
+
+//ClassList
+
+const menu = document.querySelector('.menu')
+
+menu.classList.add('active')
+menu.classList.add('azul')
+menu.classList.remove('azul')
+
+if(menu.classList.contains('active'))
+    menu.classList.add('ativado')
+
+menu.className += ' azul'
+
+console.log(menu)
+
+//Atributos
+
+const animais = document.querySelector('.animais')
+
+console.log(animais.attributes)
+
+console.log(animais.getAttribute('id'))
+
+animais.setAttribute('src', 'animais')
+
+console.log(animais.getAttribute('src'))
+
