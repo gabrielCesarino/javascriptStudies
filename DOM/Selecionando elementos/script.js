@@ -28,3 +28,20 @@ console.log(todasLi)
 
 const animaisImg = document.querySelectorAll('.animais img')
 console.log(animaisImg)
+
+//HTMLCollection
+
+const gridHTMLCollection = document.getElementsByClassName('grid-section')
+console.log(gridHTMLCollection)
+
+//NodeList
+
+const gridSectionNode = document.querySelectorAll('.grid-section')
+
+gridSectionNode.forEach(function(item, index){
+    console.log(item)
+});
+
+//Array-like to Array
+
+const arrayGrid = Array.from(gridSectionNode)
