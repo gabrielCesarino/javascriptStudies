@@ -21,4 +21,17 @@ imgs.forEach((item) => console.log(item)
 )
 
 
+//Exercicios 
+
+//Mostre no console cada parágrafo do site
+
+const allP = document.querySelectorAll('p')
+
+allP.forEach((item) => console.log(item))
+
+//Mostre o texto dos parágrafos no console
+
+allP.forEach((item) => console.log(item.innerHTML))
+
+
 
