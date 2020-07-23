@@ -45,3 +45,40 @@ gridSectionNode.forEach(function(item, index){
 //Array-like to Array
 
 const arrayGrid = Array.from(gridSectionNode)
+
+
+//Exercicios
+
+//Retorne no console todas as imagens do site
+
+const allImg = document.querySelectorAll('img')
+console.log(allImg)
+
+//Retorne no console apenas as imagens que começaram com a palavra imagem
+
+console.log(document.querySelectorAll('[src^="img/imagem"]'))
+
+//Selecione todos os links internos
+
+const allLinksInternos = document.querySelectorAll('[href^="#"]')
+
+allLinksInternos.forEach(function(item){
+    console.log(item.innerHTML)
+})
+
+//Selecione o primeiro h2 dentro de .animais-descricao
+
+const animaisDescription = document.querySelector('.animais-description')
+
+const primeiroH2 = animaisDescription.querySelector('h2')
+
+console.log(primeiroH2)
+
+
+//Selecione o último p do site
+
+const allP = document.querySelectorAll('p')
+
+const ultimoP = allP[allP.length - 1]
+
+console.log(ultimoP)
