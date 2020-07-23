@@ -1,37 +1,39 @@
-//const imgs = document.querySelectorAll('img')
+//Dimensões e distâncias
 
-//imgs.forEach(function(item, index, array){
-//  console.log(item, index)
-//})
+const listaAnimais = document.querySelector('.animais-list')
 
-//Array-like to array -> para utilizar os métodos.
+const height = listaAnimais.scrollHeight
+const animaisTop = listaAnimais.offsetTop
 
-const titulos = document.getElementsByClassName('titulo')
-const titulosArray = Array.from(titulos)
+console.log(height, animaisTop)
 
-titulosArray.forEach(function(item){
-    console.log(item.innerHTML)
-})
+const h2 = document.querySelector('h2')
+const h2Left = h2.offsetLeft
 
-//Arrow Function 
+console.log(h2Left)
 
-const imgs = document.querySelectorAll('img')
+//getBoundingClientRect
 
-imgs.forEach((item) => console.log(item)
+const section = document.querySelector('section')
+const rect = section.getBoundingClientRect()
+
+console.log(rect.width)
+console.log(rect.height)
+console.log(rect.top)
+
+if(rect.top < 0){
+    console.log('Passou')
+}
+
+console.log(
+    window.innerHeight, 
+    window.innerWidth,
+    window.pageYOffset
 )
 
+//matchMedia
 
-//Exercicios 
-
-//Mostre no console cada parágrafo do site
-
-const allP = document.querySelectorAll('p')
-
-allP.forEach((item) => console.log(item))
-
-//Mostre o texto dos parágrafos no console
-
-allP.forEach((item) => console.log(item.innerHTML))
+const small = window.matchMedia('(max-width: 600px)')
 
 
-
+console.log(small.matches)
