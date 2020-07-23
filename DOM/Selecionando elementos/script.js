@@ -112,3 +112,34 @@ animais.setAttribute('src', 'animais')
 
 console.log(animais.getAttribute('src'))
 
+//exercises
+
+//Adicione a clase ativo a todos os itens do menu
+
+const allLi = menu.querySelectorAll('li')
+
+allLi.forEach((item) => {
+    item.classList.add('ativo')
+})
+
+//Remove a classe ativo de todos os itens do menu e mantenha apenas no primeiro
+
+allLi.forEach((item, index) =>{
+    if(index !== 0 )
+        item.classList.remove('ativo')
+})
+
+//Verifique se as imagens possuem o attribute alt
+
+allImg.forEach((item) => {
+    if(item.hasAttribute('alt')){
+        let i = 0
+        i++
+        console.log(`Imagens com alt: ${i}`)
+    }else
+        console.log("Sem Alt")
+})
+
+//Modifique o href do link interno do menu
+
+menu.querySelector('a').setAttribute('href', '#oi')
