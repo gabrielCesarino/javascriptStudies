@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        document.documentElement.className += 'js'
+    </script>
     <link rel="stylesheet" href="css/style.css">
     <title>Animais fantásticos</title>
 </head>
@@ -17,7 +20,7 @@
     </nav>
     <section class="grid-section animais" id="animais">
         <h1 class="titulo"> Animais Fantásticos </h1>
-        <ul class="animais-list">
+        <ul class="animais-list js-tabmenu">
             <li>
                 <img src="img/imagem1.jpg">
             </li>
@@ -38,7 +41,7 @@
             </li>
         </ul>
 
-        <div class="animais-description">
+        <div class="animais-description js-tabcontent">
             <section>
                 <h2>Raposa</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus beatae in natus voluptatibus odio necessitatibus pariatur, delectus ex veritatis! Fugiat nulla sit eum pariatur aspernatur?</p>
