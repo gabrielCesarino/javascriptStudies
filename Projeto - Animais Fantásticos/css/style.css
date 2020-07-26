@@ -217,13 +217,13 @@ body{
     }
 }
 
-.js .js-tabcontent section{
+.js-tabcontent section{
     display: none;
 }
 
-.js section.active{
-    display: block;
-    animation: show 700ms forwards;
+section.active{
+    display: grid;
+    animation: show 500ms forwards;
 }
 
 @keyframes show{
@@ -265,4 +265,26 @@ body{
         opacity: 1;
         max-height: 200px;
     }
+}
+
+.js .js-scroll {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0)
+}
+
+.js .js-scroll.active{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: ease-in-out .3s
+}
+
+.js .copy{
+    opacity: 0;
+    transform: translate3d(100px, 0, 0);
+}
+
+.js .copy.active{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: ease-in-out .5s;
 }

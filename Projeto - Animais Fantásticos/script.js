@@ -44,29 +44,67 @@ initAccordion()
 
 function initSmoothScroll(){
 
-const linksInternos = document.querySelectorAll('.js-menu a[href^="#"')
+    const linksInternos = document.querySelectorAll('.js-menu a[href^="#"')
 
-function scrollToSection(e){
-    e.preventDefault()
-    const href = e.currentTarget.getAttribute('href')
-    const section = document.querySelector(href)
-    const topo = section.offsetTop
+    function scrollToSection(e) {
+        e.preventDefault()
+        const href = e.currentTarget.getAttribute('href')
+        const section = document.querySelector(href)
+        const topo = section.offsetTop
 
-    section.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+        section.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+        //Forma alternativa
+        // window.scrollTo({
+        //     top: topo,
+        //     behavior: 'smooth'
+        // })
+    }
+
+    linksInternos.forEach((link) => {
+        link.addEventListener('click', scrollToSection)
     })
-    //Forma alternativa
-    // window.scrollTo({
-    //     top: topo,
-    //     behavior: 'smooth'
-    // })
-}
-
-linksInternos.forEach((link) =>{
-    link.addEventListener('click', scrollToSection)
-})
 
 }
 
 initSmoothScroll()
+
+function initAnimatedScroll(){
+
+    const sections = document.querySelectorAll('.js-scroll')
+    if (sections.length) {
+        const windowsPorcentagem = window.innerHeight * 0.75
+        function animaScroll() {
+            sections.forEach((section) => {
+                const sectionTop = section.getBoundingClientRect().top - windowsPorcentagem
+                if (sectionTop < 0)
+                    section.classList.add('active')
+            })
+        }
+        animaScroll()
+
+        window.addEventListener('scroll', animaScroll)
+    }
+}
+
+initAnimatedScroll()
+
+function initAnimaFooter(){
+    const footer = document.querySelector('.copy')
+
+    function animaFooter() {
+        const windowPercetage = window.innerHeight * 0.5
+        const footerShow = footer.getBoundingClientRect().bottom - windowPercetage
+
+        console.log(footerShow)
+
+        if (footerShow < windowPercetage)
+            footer.classList.add('active')
+    }
+
+    window.addEventListener('scroll', animaFooter)
+}
+
+initAnimaFooter()
