@@ -7,11 +7,12 @@ function calc(type, value) {
         if(value === 'c'){
             result.value = ' ';
         }else if (value === '='){
-            
+            const valorCamp = result.value;
+            result.value = eval(valorCamp);
         }else {
             result.value += value;
         }
-    }else if( type === 'value'){
+    }else if(type === 'value'){
         result.value += value;
     };
 };
