@@ -23,7 +23,11 @@ console.log(allButtons);
 
 allButtons.forEach((item) => {
     item.addEventListener('click', (e) => {
-        if(e.target.textContent !== 'C' && e.target.textContent !== '=')
-        result.value += e.target.innerText;
+        if(e.target.innerText !== 'C' && e.target.innerText !== '=')
+            result.value += e.target.innerText;
+        else if(e.target.innerText === 'C')
+            result.value = ' ';
+        else 
+            result.value = eval(result.value)
     })
 })
