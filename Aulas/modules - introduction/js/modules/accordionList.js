@@ -1,3 +1,8 @@
+import * as test from './testNoDefault.js'
+
+console.log(test.test1());
+console.log(test.testConst);
+
 export default function initAccordion(){
     const accordionList = document.querySelectorAll('.js-accordion dt')
     accordionList[0].classList.add('ativo')
