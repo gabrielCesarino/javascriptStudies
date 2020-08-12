@@ -24,6 +24,6 @@ console.log(allButtons);
 allButtons.forEach((item) => {
     item.addEventListener('click', (e) => {
         if(e.target.textContent !== 'C' && e.target.textContent !== '=')
-        result.value += e.target.textContent;
+        result.value += e.target.innerText;
     })
 })
