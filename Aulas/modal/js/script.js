@@ -10,6 +10,8 @@ import initModal from './modules/modal.js'
 
 import initTooltip from './modules/tooltip.js'
 
+import initDropdownMenu from './modules/dropdownMenu.js'
+
 initSmoothScroll();
 
 animatedScroll ();
@@ -21,6 +23,8 @@ tabNav();
 initModal();
 
 initTooltip();
+
+initDropdownMenu();
 
 
 
