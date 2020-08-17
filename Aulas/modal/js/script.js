@@ -8,6 +8,8 @@ import tabNav from './modules/tabNav.js'
 
 import initModal from './modules/modal.js'
 
+import initTooltip from './modules/tooltip.js'
+
 initSmoothScroll();
 
 animatedScroll ();
@@ -17,6 +19,8 @@ accordionList ();
 tabNav();
 
 initModal();
+
+initTooltip();
 
 
 
