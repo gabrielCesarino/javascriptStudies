@@ -20,7 +20,6 @@ export default function initDropdownMenu () {
         const outside =  'data-outside'
 
         if(!element.hasAttribute(outside)){
-            events
             html.addEventListener('click', handleOutsideClick);
             element.setAttribute(outside, '');
         }
